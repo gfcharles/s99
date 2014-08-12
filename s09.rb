@@ -1,22 +1,16 @@
 class Array
   def pack
-    def _pack(list, accum, temp)
-      return accum << temp if list.empty?
-
-      head, *tail = list
-      if (head == temp.first)
-        temp << head
-      else
-        accum << temp
-        temp = [head]
+    self.reduce([]) do |z, x|
+      case
+        when z.empty?
+          z << [x]
+        when z.last.first == x
+          z.last << x
+        else
+          z << [x]
       end
-
-      _pack(tail, accum, temp)
+      z
     end
-
-    return self if self.empty?
-    head, *tail = self
-    _pack(tail, [], [head])
   end
 end
 
