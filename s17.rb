@@ -11,7 +11,7 @@ class Array
   end
 end
 
-a, b = %w(a b c d e f g h i j k).split(3)
+a, b = %w(a a a a h i j k).split(3)
 p a
 p b
 

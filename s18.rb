@@ -12,4 +12,4 @@ class Array
   end
 end
 
-p %w(a b c d e f g h i j k)._slice(3,7)
+p %w(a a a d e f g h i j k)._slice(3,7)
