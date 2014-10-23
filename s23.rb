@@ -13,6 +13,6 @@ class Array
   end
 end
 
-a = %w(a b c d e f g h)
-p a.random_select 3
-p a
+# a = %w(a b c d e f g h)
+# p a.random_select 3
+# p array
