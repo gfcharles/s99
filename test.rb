@@ -1,6 +1,9 @@
-open_count = 0
-close_count = 0
+def tester(&block)
+  File.readlines('test.rb').each do
+    yield &block
+  end
+end
 
-array = ''
-
-10.times {}
+tester {|line| p line}
+# p Dir.pwd
+# File.readlines('test.rb').each {|line| p line}
